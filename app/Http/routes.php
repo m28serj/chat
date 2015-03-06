@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'ChatController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('messages', 'MessagesController@index');
+Route::post('messages/store', 'MessagesController@store');
 
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+
+Route::post('auth/login', 'AuthController@login');
+Route::get('auth/logout', 'AuthController@logout');

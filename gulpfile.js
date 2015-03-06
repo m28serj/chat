@@ -15,7 +15,9 @@ elixir(function(mix) {
     mix.less('app.less');
 
 	mix.scripts([
-		'../assets/bower/jquery/dist/jquery.js',
-		'../assets/bower/bootstrap/dist/js/bootstrap.js'
+		'../assets/bower/jquery/dist/jquery.min.js',
+		'../assets/bower/jquery-validation/dist/jquery.validate.min.js',
+		'../assets/bower/bootstrap/dist/js/bootstrap.min.js',
+		'../assets/chat.js'
 	], 'public/js/app.js');
 });

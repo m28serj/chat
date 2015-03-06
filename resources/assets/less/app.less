@@ -2,9 +2,45 @@
 
 @import "../bootswatch/variables";
 
-@btn-font-weight: 300;
-@font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
+// All just for fun
 
-body, label, .checkbox label {
-	font-weight: 300;
+@color-red: #CF0202;
+
+.mtb-ptb(@mtop, @mbottom, @ptop, @pbottom) {
+  margin-top: @mtop;
+  margin-bottom: @mbottom;
+  padding-top: @ptop;
+  padding-bottom: @pbottom;
+}
+
+#main-container {
+
+  .mtb-ptb(20px,0,0,0);
+
+  .message {
+    border-bottom: 1px solid #ddd;
+
+    .mtb-ptb(0,10px,0,5px)
+  }
+
+  .message:last-child {
+    border-bottom: none;
+
+    .mtb-ptb(0,0,0,0)
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+
+label.error {
+  color: @color-red;
+  font-weight: 300;
+}
+
+@media (min-width: 992px) {
+  #main-container .form-group {
+    .mtb-ptb(0,0,0,0)
+  }
 }
